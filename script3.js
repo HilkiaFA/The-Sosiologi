@@ -7,19 +7,19 @@ function checkAnswer(answer) {
   if (answer === 'a') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
-    totalWrongAnswers = wrongAnswers + 4;
+    totalWrongAnswers = wrongAnswers + 1;
     window.location.href = `game4.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'b') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
-    totalWrongAnswers = wrongAnswers + 1;
+    totalWrongAnswers = wrongAnswers + 3;
     window.location.href = `index.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'c') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
-    totalWrongAnswers = wrongAnswers + 3;
+    totalWrongAnswers = wrongAnswers + 4;
     window.location.href = `index.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'd') {
