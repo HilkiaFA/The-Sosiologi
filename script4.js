@@ -8,30 +8,32 @@ function checkAnswer(answer) {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
     totalWrongAnswers = wrongAnswers + 1;
-    window.location.href = `game5.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'b') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
     totalWrongAnswers = wrongAnswers + 3;
-    window.location.href = `game5.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'c') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
     totalWrongAnswers = wrongAnswers + 4;
-    window.location.href = `game5.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'd') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
     totalWrongAnswers = wrongAnswers + 5;
-    window.location.href = `game5.html?wrongAnswers=${totalWrongAnswers}`;
   }
   else if (answer === 'e') {
     const urlParams = new URLSearchParams(window.location.search);
     wrongAnswers = parseInt(urlParams.get('wrongAnswers'));
     totalWrongAnswers = wrongAnswers + 2;
-    window.location.href = `game5.html?wrongAnswers=${totalWrongAnswers}`;
+  }
+
+  if (totalWrongAnswers => 15) {
+    window.location.href = `finis.html?wrongAnswers=${totalWrongAnswers}`;
+  }
+  else if (totalWrongAnswers < 15) {
+    window.location.href = `finis2.html?wrongAnswers=${totalWrongAnswers}`;
   }
 }
